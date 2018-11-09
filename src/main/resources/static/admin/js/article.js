@@ -49,11 +49,12 @@ function subArticle(status) {
             if (result && result.success) {
                 tale.alertOk({
                     text:'文章保存成功',
-                    then: function () {
-                        setTimeout(function () {
-                            window.location.href = '/admin/article';
-                        }, 500);
-                    }
+                    //取消保存成功后跳转
+                    // then: function () {
+                    //     setTimeout(function () {
+                    //         window.location.href = '/admin/article';
+                    //     }, 500);
+                    // }
                 });
             } else {
                 tale.alertError(result.msg || '保存文章失败');

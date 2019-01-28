@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+ 
+<channel>
+  <title>邓某某的首页</title>
+  <link>http://www.dengmomo.com</link>
+  <description>免费编程教程</description>
+  <item>
+    <title>苹果的家</title>
+    <link>http://www.dengmomo.com/article/8</link>
+    <description>苹果同学的日记</description>
+  </item>
+  <item>
+    <title>JVM</title>
+    <link>http://www.dengmomo.com/article/3</link>
+    <description>JVM白皮书</description>
+  </item>
+</channel>
+ 
+</rss>

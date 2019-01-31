@@ -28,7 +28,7 @@ var tale = new $.tale();
  */
 function subArticle(status) {
     var title = $('#articleForm input[name=title]').val();
-    var content = $('#text').val();
+    var content = editor1.txt.html();
     if (title == '') {
         tale.alertWarn('请输入文章标题');
         return;
@@ -63,11 +63,17 @@ function subArticle(status) {
     });
 }
 
-var textarea = $('#text'),
-    toolbar = $('<div class="markdown-editor" id="md-button-bar" />').insertBefore(textarea.parent())
-preview = $('<div id="md-preview" class="md-hidetab" />').insertAfter('.markdown-editor');
+var E = window.wangEditor;
+var editor1 = new E('#text');  // 两个参数也可以传入 elem 对象，class 选择器
+editor1.customConfig.zIndex = 10;
+editor1.create();
+editor1.txt.text($('#textData').text());
 
-markdown(textarea, toolbar, preview);
+// var textarea = $('#text'),
+//     toolbar = $('<div class="markdown-editor" id="md-button-bar" />').insertBefore(textarea.parent())
+// preview = $('<div id="md-preview" class="md-hidetab" />').insertAfter('.markdown-editor');
+//
+// markdown(textarea, toolbar, preview);
 
 
 function allow_comment(obj) {
